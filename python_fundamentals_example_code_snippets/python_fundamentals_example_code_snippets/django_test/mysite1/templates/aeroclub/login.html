@@ -1,0 +1,10 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<form role='form' action="{% url 'club_login' %}" method = 'post'>
+    {% csrf_token %}
+    {{ form }}
+    <button role="submit" class='btn btn-success'>Sign In</button>
+</form>
+
+{% endblock %}

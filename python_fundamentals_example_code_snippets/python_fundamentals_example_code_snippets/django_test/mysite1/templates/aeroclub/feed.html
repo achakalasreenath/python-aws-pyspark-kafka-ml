@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+{% block content %}
+{% for u in urls %}
+<div class="container">
+    <div class="card mb-3"  >
+        <div class="card-body">
+            <h4 class="card-title">{{u.post.club.club_name}}</h4>
+            <p class="card-text">{{ u.post.post_content }}</p>
+            <p class="card-text">{{ u.post.post_likes }}</p>
+            <p class="card-text">
+                <small class="text-muted">Post by {{ u.post.club.club_name }}</small>
+            </p>
+        </div>
+        <img src='{{u.url}}' class="card-img-top" alt='{{u}}' style="background-color: grey">
+    </div>
+</div>
+{% endfor %}
+
+{% endblock %}
